@@ -40,8 +40,6 @@
     font-style: normal;
 }
 
-
-
 /*-------------------------------------------*/
 /* BASIC SETUP */
 /*-------------------------------------------*/
@@ -90,11 +88,15 @@ body {
 header {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
+    position: relative;
+    z-index: 3;
 }
 
 .content {
     flex: 1 0 auto;
     -webkit-flex: 1 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 footer {
@@ -381,25 +383,35 @@ textarea:focus {
     display: inline-block;
     vertical-align: top;
     cursor: pointer;
-    margin: 4px;
+    margin: 4px 10px;
 }
 
 .slick-dots li button {
     font-size: 0;
     line-height: 0;
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
     cursor: pointer;
-    background: transparent;
+    background: #34716e;
     position: relative;
-    border: 2px solid #006df0;
+    border: none;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
 
-.slick-dots li.slick-active button {
-    background: #006df0;
+.slick-dots li.slick-active button:before {
+    display: block;
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-image: url(img/active_dott.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: -4px;
+    left: -4px;
 }
 
 /*-- /Slick --*/
@@ -410,6 +422,10 @@ textarea:focus {
 
 header {
     border-bottom: 2px solid #004b46;
+}
+
+header.bg {
+	background-color: #000;
 }
 
 .header_row {
@@ -425,6 +441,8 @@ header {
 .header_site .left {
     width: 240px;
     padding-right: 10px;
+    position: relative;
+    z-index: 14;
 }
 
 .header_site .right {
@@ -438,7 +456,7 @@ header {
 }
 
 .inline_wrapp .inline {
-    display: inline;
+    display: inline-block;
     padding: 0 10px;
 }
 
@@ -590,7 +608,7 @@ header {
     cursor: pointer;
     position: relative;
     top: 6px;
-    z-index: 11;
+    z-index: 14;
     border: 1px solid transparent;
 }
 
@@ -598,7 +616,7 @@ header {
     display: block;
     width: 27px;
     height: 2px;
-    background: #466896;
+    background: #66bab5;
     margin: 0 auto 7px auto;
     -webkit-transition-property: transform, border, background;
     -webkit-transition-duration: .3s;
@@ -631,7 +649,7 @@ header {
 }
 
 .respmenubtn:hover span {
-    background: #e9ba5f;
+    background: #65b9b4;
 }
 
 .respmenubtn.active span {
@@ -639,7 +657,7 @@ header {
     width: 35px;
     top: 2px;
     left: 0;
-    background: #e9ba5f;
+    background: #65b9b4;
 }
 
 .respmenubtn.active span:last-child {
@@ -676,7 +694,23 @@ header {
     background-image: url(img/g_bg.png);
     background-repeat: no-repeat;
     background-position: center 24px;
-    overflow: hidden;
+    /*overflow: hidden;*/
+}
+
+.promo_bg_img {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
+.promo_img_resp {
+	/*display: block;*/
+	display: none;
+	margin: 0 auto;
+	max-width: 100%;
 }
 
 .promo_text {
@@ -864,15 +898,37 @@ header {
 
 .promo_img {
     display: block;
-    /*margin: -111px auto 0 auto;*/
+    max-width: 100%;
     margin: -111px auto -152px auto;
     position: relative;
     left: -2.5%;
 }
 
+.promo_img_resp {
+	display: none;
+}
+
  /*-- /Section 1 --*/
 
  /*-- Section 2 --*/
+
+.sect_2 {
+	position: relative;
+}
+
+.sect_2 > .row {
+	position: relative;
+	z-index: 2;
+}
+
+.steps_stars {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
 
 .title_wrapp {
     text-align: center;
@@ -898,7 +954,10 @@ header {
 }
 
 .step_thumb .icon_box img {
-    
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 100%;
 }
 
 .step_thumb h3 {
@@ -957,32 +1016,23 @@ header {
 }
 
 .article:nth-child(1) {
-    margin-top: -106px;
+    margin-top: -79px;
 }
 
 .article {
-    margin-top: -209px;
+    margin: -240px 0;
 }
 
-.article:nth-child(2) {
-    margin-top: -340px;
-}
-
-.article:nth-child(3) {
-    margin-top: -273px;
-}
-
-.article:nth-child(4) {
-    margin-top: -298px;
-    margin-bottom: -130px;
+.article:last-child {
+	margin-bottom: -100px;
 }
 
 .article .left {
-    width: 50%;
+    width: 49.85%;
 }
 
 .article .right {
-    width: 50%;
+    width: 50.15%;
 }
 
 .article:nth-child(odd) .left {
@@ -991,6 +1041,11 @@ header {
 
 .article:nth-child(odd) .right {
     order: 1;
+}
+
+.article:nth-child(even) .left img {
+	position: relative;
+	left: -2%;
 }
 
 .article_content {
@@ -1010,28 +1065,38 @@ header {
     text-align: center;
 }
 
-.phone_01 {
-    position: relative;
-    left: 37px;
-}
-
-.phone_02 {
-    position: relative;
-    left: -14px;
-}
-
-.phone_03 {
-    position: relative;
-    left: 18px;
-}
-
-.phone_04 {
-    position: relative;
-    left: -14px;
-}
-
 .btn_wrapp_2 {
+	padding-top: 70px;
+	position: relative;
+    z-index: 2;
     text-align: center;
+}
+
+.articles_slider {
+	position: relative;
+}
+
+.articles_slider .slick-dots {
+	width: 22px;
+	position: absolute;
+	top: 63px;
+    right: -10px;
+}
+
+.articles_slider .slick-dots:before {
+	display: block;
+	width: 1px;
+	content: "";
+    height: calc(100% - 60px);
+    background: #245a57;
+    position: absolute;
+    top: 44px;
+    left: 11px;
+}
+
+.articles_slider .slick-dots li {
+	display: block;
+	margin: 12px 0;
 }
 
 /*-- /Section 3 --*/
@@ -1089,6 +1154,7 @@ header {
     width: auto;
     height: auto;
     max-width: 100%;
+    max-height: 100%;
     margin: 0 auto;
 }
 
@@ -1192,13 +1258,30 @@ header {
 
 /*-- /Section 5 --*/
 
+/*-- Section 6 --*/
 
+.slider {
+	max-width: 1130px;
+	margin: 0 auto;
+}
 
+.slider .slide {
+
+}
+
+.slider .slide img {
+	display: block;
+	margin: 0 auto;
+}
+
+/*-- /Section 6 --*/
 
 /*-- Section 7 --*/
 
 .contacts_sect {
     margin-top: 100px;
+    position: relative;
+    z-index: 2;
 }
 
 .contacts_thumbs {
@@ -1272,12 +1355,23 @@ header {
 
 /*-- /Section 7 --*/
 
+.bottom_bg {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
 /*-------------------------------------------*/
 /* ----- FOOTER ------ */
 /*-------------------------------------------*/
 
 footer {
     padding: 1px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .footer_section {
