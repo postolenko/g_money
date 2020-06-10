@@ -167,4 +167,23 @@ $(document).ready(function() {
         }
     });
 
+    // ------------
+    var topOffset;
+    $('.main_nav a[href^="#"]').on('click', function (e) {
+      e.preventDefault();
+      var hrefAttr = $(this).attr("href");
+      if( hrefAttr.length > 0 && hrefAttr != "#" ) {
+        if(bodyWidth <= 1024) {
+          topOffset = -80;
+        } else {
+          topOffset = 2
+        }
+          $('html, body').stop().animate({
+              'scrollTop': $(hrefAttr).offset().top+topOffset
+          }, 500);
+          $("#resp_nav").fadeOut(300);
+          $(".respmenubtn").removeClass("active");
+      }
+    });
+
 });
