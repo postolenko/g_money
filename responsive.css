@@ -724,6 +724,7 @@
 
 .sect_2 {
     padding-top: 1px;
+    position: relative;
 }
 
 /*-- /Section 2 --*/
@@ -845,11 +846,13 @@ h3 {
 
 .step_thumb h3 {
     padding-bottom: 0;
+    color: #c4c4c4;
 }
 
 .step_thumb p {
     font-size: 19px;
     line-height: 22px;
+    color: #c4c4c4;
 }
 
 .step_thumb p br {
@@ -1190,7 +1193,6 @@ h3 {
 	/*-- /Section 5 --*/
 
 }
-
 
 @media only screen and (min-width: 1025px) {
 
