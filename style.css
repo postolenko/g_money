@@ -1300,6 +1300,7 @@ header.bg {
 	display: block;
 	width: auto;
 	height: auto;
+	height: 100%;
 	max-width: 310px;
 	margin: 0 auto;
 }

@@ -205,6 +205,24 @@
 	}
 
 	/*-- /Section 3 --*/
+
+	/*-- Section 6 --*/
+
+	.main-slider-box {
+	    height: 552px;
+	    margin: 28px 0 3px 0;
+	}
+
+	.main-slider .slide {
+	    height: 450px;
+	    width: 340px;
+	}
+
+	.swiper-pagination-bullet {
+	    margin: 0 15px !important;
+	}
+
+	/*-- /Section 6 --*/
 }
 
 @media only screen and (max-width: 1124px) {
@@ -609,6 +627,24 @@
 
 	/*-- /Section 5 --*/
 
+	/*-- Section 6 --*/
+
+	.main-slider-box {
+	    height: 552px;
+	    margin: 28px 0 3px 0;
+	}
+
+	.main-slider .slide {
+	    height: 450px;
+	    width: 280px;
+	}
+
+	.swiper-pagination-bullet {
+	    margin: 0 15px !important;
+	}
+
+	/*-- /Section 6 --*/
+
 	/*-- Section 7 --*/
 
 	.contacts_thumbs {
@@ -812,6 +848,39 @@
 }
 
 /*-- /Section 5 --*/
+
+/*-- Section 6 --*/
+
+.sect_6 {
+    padding-top: 65px;
+}
+
+.main-slider-box {
+    height: 520px;
+}
+
+.main-slider .slide {
+    height: 450px;
+    width: 230px;
+}
+
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.swiper-pagination-bullet-active:before {
+    width: 14px !important;
+    height: 14px !important;
+    top: -2px;
+    left: -2px;
+}
+
+.btn_wrapp_2 {
+    padding-top: 30px;
+}
+
+/*-- /Section 6 --*/
 
 /*-- Section 7 --*/
 
