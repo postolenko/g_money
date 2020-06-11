@@ -14,7 +14,6 @@ function getHeaderParams() {
   } else {
     $("header").removeClass("bg");
   }
-
 }
 
 $slickGreen = false;
@@ -41,29 +40,6 @@ function getArticlesSlider(){
     }
 };
 
-// function getArticlesSlider() {
-
-//     if( $(".articles_slider").length > 0 ) {
-//       if(bodyWidth<= 767) {
-//         $(".articles_slider").not(".slick-initialized").slick({
-//             dots: false,
-//             arrows: true,
-//             // autoplay: true,
-//             autoplaySpeed: 4000,
-//             speed: 1200,
-//             slidesToShow: 1,
-//             slidesToScroll: 1,
-//             fade: true
-//         });
-//       } else {
-//         $(".articles_slider").slick({destroy});
-//       }
-
-//     }
-
-// }
-
-
 $(window).load(function() {
 
 
@@ -86,34 +62,33 @@ $(document).ready(function() {
   getHeaderParams();
   getArticlesSlider();
 
-    if( $(".slider").length > 0 ) {
-        $(".slider").not(".slick-initialized").slick({
-            dots: true,
-            arrows: false,
-            // autoplay: true,
-            autoplaySpeed: 4000,
-            speed: 1200,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            // fade: true,
-            // responsive: [
-            //     {
-            //       breakpoint: 900,
-            //       settings: {
-            //         slidesToShow: 2,
-            //         slidesToScroll: 2
-            //       }
-            //     },
-            //     {
-            //       breakpoint: 540,
-            //       settings: {
-            //         slidesToShow: 1,
-            //         slidesToScroll: 1
-            //       }
-            //     }
-            //   ]
-        });
+    if( $(".main-slider").length > 0 ) {
+      
+      var swiper = new Swiper('.swiper-container', {
+          loop: true,
+          speed: 1400,
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: 'auto',
+          coverflowEffect: {
+          rotate: -30,
+          stretch: 0,
+          depth: 180,
+          modifier: 1,
+          slideShadows : false
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      });
+
     }
+
+    $(".swiper-pagination-bullet").on("click", function() {
+      console.log("efddfdf");
+    });
 
     if( $(".articles_slider").length > 0 ) {
         $(".articles_slider").not(".slick-initialized").slick({
