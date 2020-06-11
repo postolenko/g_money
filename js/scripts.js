@@ -41,9 +41,6 @@ function getArticlesSlider(){
 };
 
 $(window).load(function() {
-
-
-
 });
 
 $(window).resize(function() {
@@ -63,7 +60,7 @@ $(document).ready(function() {
   getArticlesSlider();
 
     if( $(".main-slider").length > 0 ) {
-      
+
       var swiper = new Swiper('.swiper-container', {
           loop: true,
           speed: 1400,
@@ -85,10 +82,6 @@ $(document).ready(function() {
       });
 
     }
-
-    $(".swiper-pagination-bullet").on("click", function() {
-      console.log("efddfdf");
-    });
 
     if( $(".articles_slider").length > 0 ) {
         $(".articles_slider").not(".slick-initialized").slick({

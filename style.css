@@ -257,22 +257,6 @@ a:active {
     -webkit-tap-highlight-color: transparent;
 }
 
-input {
-
-}
-
-input:focus {
-
-}
-
-textarea {
-
-}
-
-textarea:focus {
-
-}
-
 /*-------------------------------------------*/
 /* ----- REUSABLE COMPONENTS ------ */
 /*-------------------------------------------*/
@@ -694,7 +678,6 @@ header.bg {
     background-image: url(img/g_bg.png);
     background-repeat: no-repeat;
     background-position: center 24px;
-    /*overflow: hidden;*/
 }
 
 .promo_bg_img {
